@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean name="employee" class="info.shkryl.bean.Employee">
+        <constructor-arg name="car" ref="car"/>
+        <constructor-arg name="house" ref="house"/>
+        <constructor-arg name="pet" ref="pet"/>
+    </bean>
+
+    <bean name="car" class="info.shkryl.bean.Car">
+        <constructor-arg index="0" value="Lada Vesta"/>
+    </bean>
+
+    <bean name="house" class="info.shkryl.bean.House">
+        <constructor-arg name="door" ref="door"/>
+        <constructor-arg name="wall" ref="wall"/>
+        <constructor-arg name="window" ref="window"/>
+    </bean>
+
+    <bean name="door" class="info.shkryl.bean.Door">
+        <constructor-arg index="0" value="100"/>
+    </bean>
+
+    <bean name="wall" class="info.shkryl.bean.Wall">
+        <constructor-arg index="0" value="Brown"/>
+    </bean>
+
+    <bean name="window" class="info.shkryl.bean.Window">
+        <constructor-arg index="0" value="100"/>
+        <constructor-arg index="1" value="200"/>
+    </bean>
+
+    <bean name="pet" class="info.shkryl.bean.Pet">
+        <constructor-arg index="0" value="Jack"/>
+        <constructor-arg index="1" value="Dog"/>
+    </bean>
+</beans>
